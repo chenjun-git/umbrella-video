@@ -1,0 +1,14 @@
+listen = ":7109"
+releaseMode = false
+
+[monitor]
+namespace = "umbrella"
+subsystem = "user"
+
+[mysql]
+dsn = "root:root@tcp(127.0.0.1:3306)/umbrella?charset=utf8mb4,utf8&parseTime=True&loc=UTC"
+maxIdle = 1
+maxOpen = 2
+
+[http]
+listen = ":7108"

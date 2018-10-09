@@ -1,0 +1,21 @@
+syntax = "proto3";
+package pb;
+
+import "umbrella-go/umbrella-common/proto/common.proto";
+
+// Video
+message Video {
+    string title = 1;
+    string url = 2;
+    string abstract = 3;
+    string comments_count = 4;
+    string article_type = 5;
+    strint create_time = 6;
+    string publish_time = 7;
+}
+
+// Videos
+message Videos {
+    repeated Video items = 1;
+    common.Error error = 2;
+}
