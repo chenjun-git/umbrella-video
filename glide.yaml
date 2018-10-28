@@ -1,4 +1,4 @@
-package: .
+package: github.com/chenjun-git/umbrella-video
 import: 
 - package: github.com/go-sql-driver/mysql
 - package: github.com/golang/protobuf

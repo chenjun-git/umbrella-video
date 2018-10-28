@@ -42,7 +42,7 @@ func initMonitor() {
 }
 
 func startHTTPServer() {
-	router := handler.RegisterUserRouter()
+	router := handler.RegisterVideoRouter()
 	commonUtils.RegisterPProf(router)
 	monitor.RegisterHandlers(router)
 

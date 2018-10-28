@@ -8,7 +8,7 @@ import (
 
 	"github.com/chenjun-git/umbrella-common/database/sql"
 
-	"business/video/common"
+	"github.com/chenjun-git/umbrella-video/common"
 )
 
 // MySQL 全局的MySQL连接池
@@ -68,4 +68,3 @@ func (db *dberWithContext) QueryRow(query string, args ...interface{}) *sql.Row 
 func BindDBerWithContext(ctx context.Context, db MySQLExec) MySQLExec {
 	return &dberWithContext{db, ctx}
 }
-package db

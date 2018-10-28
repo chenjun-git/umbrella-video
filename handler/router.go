@@ -3,7 +3,7 @@ package handler
 import (
 	"github.com/go-chi/chi"
 
-	"business/video/handler/v1.0"
+	"github.com/chenjun-git/umbrella-video/handler/v1.0"
 )
 
 func RegisterVideoRouter() *chi.Mux {
