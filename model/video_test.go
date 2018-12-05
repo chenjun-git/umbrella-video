@@ -41,10 +41,10 @@ func TestCreateGetDeleteVideo(t *testing.T) {
 	err := CreateVideo(db.MySQL, "test_title", "test_path", "test_thumbnail", "test_description", false, 1, "test_pushlish_user_id")
 	assert.Nil(err)
 
-	video, err := GetVideoByID(db.MySQL, 1)
+	video, err := GetVideoById(db.MySQL, 1)
 	assert.Nil(err)
 	assert.Equal("test_title", video.Title)
 
-	err = DeleteVideoBy(db.MySQL, 1)
+	err = DeleteVideoById(db.MySQL, 1)
 	assert.Nil(err)
 }

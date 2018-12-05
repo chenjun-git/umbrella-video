@@ -8,9 +8,9 @@ import (
 	"github.com/chenjun-git/umbrella-common/monitor"
 	commonUtils "github.com/chenjun-git/umbrella-common/utils"
 
-	"business/video/common"
-	"business/video/db"
-	"business/video/handler"
+	"github.com/chenjun-git/umbrella-video/common"
+	"github.com/chenjun-git/umbrella-video/db"
+	"github.com/chenjun-git/umbrella-video/handler"
 )
 
 var (

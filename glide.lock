@@ -1,5 +1,5 @@
-hash: c9642c0fda0190a9226c506f547dccd41030d21bed10f85afe78b692006767b9
-updated: 2018-10-09T22:52:02.062042537+08:00
+hash: 34e9c425292c4726118e112df0a752c969b704eadff7759c51d96de14b670f78
+updated: 2018-10-28T14:46:19.028685557+08:00
 imports:
 - name: github.com/ahmetb/go-linq
   version: 67424dce7b47e42b7f2373557878fd6e3f2d8c44
@@ -16,13 +16,19 @@ imports:
   subpackages:
   - caller
   - database/sql
+  - errors
   - json
+  - lang
   - monitor
+  - proto
+  - render
   - utils
 - name: github.com/dchest/captcha
   version: 6a29415a8364ec2971fdc62d9e415ed53fc20410
 - name: github.com/go-chi/chi
   version: 235fa5d9ba51003bd4c40a69bb9e7c4d82a5ef39
+- name: github.com/go-chi/render
+  version: 3215478343fbc559bd3fc08f7031bb134d6bdad5
 - name: github.com/go-sql-driver/mysql
   version: 99ff426eb706cffe92ff3d058e168b278cabf7c7
 - name: github.com/golang/protobuf
@@ -92,6 +98,8 @@ imports:
   - unicode/norm
 - name: google.golang.org/appengine
   version: ae0ab99deb4dc413a2b4bd6c8bdd0eb67f1e4d06
+  subpackages:
+  - cloudsql
 - name: google.golang.org/genproto
   version: 4b56f30a1fd96a133a036b62cdd2a249883dd89b
   subpackages:
@@ -124,4 +132,12 @@ imports:
   - stats
   - status
   - tap
-testImports: []
+testImports:
+- name: github.com/davecgh/go-spew
+  version: d8f796af33cc11cb798c1aaeb27a4ebc5099927d
+  subpackages:
+  - spew
+- name: github.com/pmezard/go-difflib
+  version: 792786c7400a136282c1664665ae0a8db921c6c2
+  subpackages:
+  - difflib

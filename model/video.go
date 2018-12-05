@@ -43,7 +43,7 @@ func CreateVideo(db db.MySQLExec, title, storePath, thumbnail, description strin
 	return nil
 }
 
-func DeleteVideoBy(db db.MySQLExec, video_id int) error {
+func DeleteVideoById(db db.MySQLExec, video_id int) error {
 	_SQL := "delete from video where video_id = ?"
 
 	_, err := db.Exec(_SQL, video_id)
@@ -85,6 +85,6 @@ func getVideoBy(db db.MySQLExec, filter string, args []interface{}) (*Video, err
 	return video, nil
 }
 
-func GetVideoByID(db db.MySQLExec, video_id int) (*Video, error){
-	return getVideoBy(db, "video_id = ?", []interface{}{video_id})
+func GetVideoById(db db.MySQLExec, videoId int) (*Video, error){
+	return getVideoBy(db, "video_id = ?", []interface{}{videoId})
 }

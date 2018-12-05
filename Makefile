@@ -1,8 +1,8 @@
 export GOPATH := $(CURDIR)/_project
 export GOBIN := $(CURDIR)/bin
 
-CURRENT_GIT_GROUP := business
-CURRENT_GIT_REPO := video
+CURRENT_GIT_GROUP := github.com/chenjun-git
+CURRENT_GIT_REPO := umbrella-video
 COMMONENVVAR ?= GOOS=linux GOARCH=amd64
 BUILDENVVAR ?= cgo_enabled=0
 
@@ -14,10 +14,10 @@ folder_dep:
 
 deps: folder_dep
 	mkdir -p $(CURDIR)/vendor
-	glide install
+	#glide install
 
 build: folder_dep
-	$(BUILDENVVAR) go build -o $(GOBIN)/umbrella-user -ldflags "-X main.BuildTime=`date '+%Y-%m-%d_%I:%M:%S%p'` -X main.BuildGitHash=`git rev-parse HEAD` -X main.BuildGitTag=`git describe --tags`" $(CURRENT_GIT_GROUP)/$(CURRENT_GIT_REPO)
+	$(BUILDENVVAR) go build -o $(GOBIN)/umbrella-video -ldflags "-X main.BuildTime=`date '+%Y-%m-%d_%I:%M:%S%p'` -X main.BuildGitHash=`git rev-parse HEAD` -X main.BuildGitTag=`git describe --tags`" $(CURRENT_GIT_GROUP)/$(CURRENT_GIT_REPO)
 
 linux_build: deps
 	$(BUILDENVVAR) make build

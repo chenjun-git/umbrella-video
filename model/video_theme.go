@@ -31,6 +31,17 @@ func CreateVideoTheme(db db.MySQLExec, name, description string) error {
 	return nil
 }
 
+func DeleteVideoThemeById(db db.MySQLExec, id int) error {
+	_SQL := "delete from video_theme where id = ?"
+
+	_, err := db.Exec(_SQL, id)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func DeleteVideoThemeByName(db db.MySQLExec, name string) error {
 	_SQL := "delete from video_theme where name = ?"
 
@@ -65,6 +76,10 @@ func getVideoThemeBy(db db.MySQLExec, filter string, args []interface{}) (*Video
 	}
 
 	return videoTheme, nil
+}
+
+func GetVideoThemeById(db db.MySQLExec, id int) (*VideoTheme, error) {
+	return getVideoThemeBy(db, "theme_id = ?", []interface{}{id})
 }
 
 func GetVideoThemeByName(db db.MySQLExec, name string) (*VideoTheme, error) {
